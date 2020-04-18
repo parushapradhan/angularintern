@@ -1,0 +1,34 @@
+
+    <mat-card>
+        <mat-card-content>
+            <div>
+                <mat-form-field class="flexbox_content">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="Fname" #firstInput required />
+                </mat-form-field>&nbsp;
+                <mat-form-field class="flexbox_content">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="Lname" required />
+
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="flexbox_content">
+                    <mat-label>Contact no.</mat-label>
+                    <input matInput formControlName="contact" (keypress)="keyPress($event)" required /> </mat-form-field>&nbsp;
+                <mat-form-field class="flexbox_content">
+                    <mat-label>email</mat-label>
+                    <input matInput formControlName="email" required />
+
+                </mat-form-field>
+              
+                <div>
+                    <mat-card-actions>
+                        <button type="button" mat-raised-button color="primary" (click)="onSubmit(staffForm)">
+              Submit
+            </button>
+                    </mat-card-actions>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
